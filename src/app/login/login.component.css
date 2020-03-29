@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.login-container {
+  min-height: 50vh;
+  min-width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  text-align: center;
+  font-family: "Dancing Script", cursive, sans-serif;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 0.2em;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.login-label {
+  margin-bottom: 0.3em;
+}
+
+.login-input {
+  font-size: 1.2em;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+
+.login-btn > a {
+  text-align: center;
+  padding: 0.4em 2em;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+}

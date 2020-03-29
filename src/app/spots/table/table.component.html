@@ -1,0 +1,35 @@
+<div class="table-container">
+  <div class="table-title">
+    Locations
+  </div>
+  <div class="search-bar">
+    <div class="search-icon">
+      <i class="fas fa-search"></i>
+    </div>
+    <input type="text" placeholder="Search..." (input)="search($event)" />
+  </div>
+  <div class="table-wrapper">
+    <table class="spots-table">
+      <tr class="header-row">
+        <th (click)="sortTable('name')">
+          <div class="th-flex">Name <i class="fas fa-sort"></i></div>
+        </th>
+        <th (click)="sortTable('country')">
+          <div class="th-flex">Country <i class="fas fa-sort"></i></div>
+        </th>
+        <th (click)="sortTable('lat', true)">
+          <div class="th-flex">Latitude <i class="fas fa-sort"></i></div>
+        </th>
+        <th (click)="sortTable('long', true)">
+          <div class="th-flex">Longitude <i class="fas fa-sort"></i></div>
+        </th>
+        <th (click)="sortTable('probability', true)">
+          <div class="th-flex">Wind Prob. <i class="fas fa-sort"></i></div>
+        </th>
+        <th (click)="sortTable('month', false, true)">
+          <div class="th-flex">When to go <i class="fas fa-sort"></i></div>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="map-container" (click)="showDetails($event)">
+  <div #mapContainer id="map"></div>
+  <div
+    class="map-filters filterMenu"
+    (click)="showFilters()"
+    *ngIf="filtersHidden; else isNotAvailable"
+  >
+    <span class="filter-icon filterMenu"></span>
+    <div class="filters-title filterMenu">Filters</div>
+  </div>
+  <div class="marker-details">
+    <div class="padding-container">
+      <div class="details-header">
+        <div class="header-title name">Fuerteventura</div>
+        <div class="header-subtitle country">Spain</div>
+      </div>
+      <div class="details-field">
+        <div class="field-title">
+          WIND PROBABILITY
+        </div>
+        <div class="field-value probability">
+          49%
+        </div>
+      </div>
+      <div class="details-field">
+        <div class="field-title">
+          LATITUDE
+        </div>
+        <div class="field-value lat">
+          28.3587° N
+        </div>
+      </div>
+      <div class="details-field">
+        <div class="field-title">
+          LONGITUDE
+        </div>
+        <div class="field-value long">
+          14.0537° W
+        </div>
+      </div>
+      <div class="details-field">
+        <div class="field-title">
+          WHEN TO GO
+        </div>
+        <div class="field-value month">
+          June
+        </div>
+      </div>
+    </div>
+    <div class="details-btn" (click)="updateFavorites($event)">
+      + ADD TO FAVORITES
+    </div>
+  </div>
+</div>
+
+<ng-template #isNotAvailable>
+  <div class="filters-overflow filterMenu">
+    <div class="filters-overflow-field filterMenu">
+      <label class="filters-overflow-label filterMenu">Country</label>
+      <input
+        type="text"
+        class="filters-overflow-input filterMenu"
+        id="country"
+      />
+    </div>
+    <div class="filters-overflow-field filterMenu">
+      <label class="filters-overflow-label filterMenu"
+        >Wind Probability (%)</label
+      >
+      <input type="text" class="filters-overflow-input filterMenu" id="wind" />
+    </div>
+    <div class="filters-button filterMenu" (click)="applyFilter()">
+      APPLY FILTER
+    </div>
+  </div>
+</ng-template>

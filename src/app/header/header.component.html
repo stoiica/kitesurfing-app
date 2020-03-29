@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="logo">
+    <label>Kite</label>
+  </div>
+  <div class="user-avatar">
+    <img
+      src="https://i.imgur.com/5VZqhdb.png"
+      alt="user's avatar"
+      (click)="toggleNav()"
+    />
+    <div class="avatar-nav hide-content">
+      <div class="avatar-nav-item">
+        <i class="fas fa-sign-out-alt" (click)="logoutUser()"
+          ><span class="nav-logout">Logout</span></i
+        >
+      </div>
+    </div>
+  </div>
+</div>
